@@ -92,6 +92,7 @@ nav div#rightSideNav div#divContainer p{
     margin: 0;
     color: white;
     font-size: 1.3rem;
+    text-align: center;
 }
 nav div#rightSideNav div#modeContainer{
     padding: 0.4rem;
@@ -121,6 +122,7 @@ nav div#rightSideNav button#resetBtn{
 nav div#rightSideNav button#resetBtn:hover{
     box-shadow: 0 6px 16px rgba(255,0,128,0.3);
     transform: scale(1.05);
+    cursor: pointer;
 }
 nav div#rightSideNav button#resetBtn img{
     width: 2rem;
@@ -143,18 +145,22 @@ header div#innerWholeCardsCont{
     justify-content: center;
     align-items: center;
     width: 60%;
+    min-width: 35rem;
     padding: 5rem;
 }
 header div#innerWholeCardsCont div.cardItems{
-    width: 30%;
+    width: 20%;
     aspect-ratio: 1 / 1; 
     margin: 10px;
     border-radius: 2rem;
-    background-color: var(--lightGrayeshPink);
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 header div#innerWholeCardsCont div.cardItems img{
     width: 10rem;
+    min-width: 3rem;
+    border-radius: 2rem;
 }
+
