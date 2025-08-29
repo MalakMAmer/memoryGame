@@ -164,7 +164,7 @@ function updateTimerDisplay(){
 function endGame(won) {
   setTimeout(() => {
     if (won) {
-      alert(`Conrats!`);
+      alert(`Congrats!`);
     } else {
       alert("Time's up! Game Over");
     }
