@@ -5,6 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none; 
+    -webkit-user-select: none; 
 }
 :root{
     --LightPink: #E6BCD590;
@@ -150,11 +154,10 @@ header div#innerWholeCardsCont{
     justify-content: center;
     align-items: center;
     width: 60%;
-    min-width: 35rem;
     padding: 5rem;
 }
 header div#innerWholeCardsCont div.cardItems{
-    width: 20%;
+    width: 17%;
     aspect-ratio: 1 / 1; 
     margin: 10px;
     border-radius: 2rem;
@@ -166,7 +169,6 @@ header div#innerWholeCardsCont div.cardItems{
 }
 header div#innerWholeCardsCont div.cardItems img{
     width: 10rem;
-    min-width: 3rem;
     border-radius: 2rem;
     transition: all 300ms ease;
 }
@@ -215,7 +217,7 @@ header div#innerWholeCardsCont div.cardItems img{
 
 /* media Quereis */
 
-@media (max-width:600px){
+@media (max-width:660px){
     nav{
         justify-content: center;
     }
@@ -231,5 +233,20 @@ header div#innerWholeCardsCont div.cardItems img{
     }
     header{
         height: 80vh;
+    }
+    header div#innerWholeCardsCont{
+        padding: 2rem;
+        width: auto;
+    }
+    header div#innerWholeCardsCont div.cardItems{
+        border-radius: 1.2rem;
+    }
+    header div#innerWholeCardsCont div.cardItems img{
+        width: 12rem;
+        border-radius: 1.2rem;
+        transition: all 300ms ease;
+    }
+    nav div#rightSideNav button.Btn{
+        margin-bottom: 10px;
     }
 }
