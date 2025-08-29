@@ -69,9 +69,11 @@ img{
 nav{
     background-color: var(--darkPink);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 1rem;
+    transition: all 200ms ease;
 }
 nav div#leftSideNav{
     display: flex;
@@ -81,6 +83,7 @@ nav div#leftSideNav img{
 }
 nav div#rightSideNav{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -107,7 +110,7 @@ nav div#rightSideNav div#modeContainer:hover{
 nav div#rightSideNav div#modeContainer img{
     width: 2.5rem;
 }
-nav div#rightSideNav button#resetBtn{
+nav div#rightSideNav button.Btn{
     width: 10rem;
     display: flex;
     justify-content: center;
@@ -118,13 +121,14 @@ nav div#rightSideNav button#resetBtn{
     border: none;
     box-shadow: 0 16px 32px rgba(0,0,0,0.1);
     transition: all 300ms ease;
+    margin: 0 10px;
 }
-nav div#rightSideNav button#resetBtn:hover{
+nav div#rightSideNav button.Btn:hover{
     box-shadow: 0 6px 16px rgba(255,0,128,0.3);
     transform: scale(1.05);
     cursor: pointer;
 }
-nav div#rightSideNav button#resetBtn img{
+nav div#rightSideNav button.Btn img{
     width: 2rem;
     margin-right:5px;
 }
@@ -138,6 +142,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 200ms ease;
 }
 header div#innerWholeCardsCont{
     display: flex;
@@ -157,10 +162,74 @@ header div#innerWholeCardsCont div.cardItems{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 300ms ease;
 }
 header div#innerWholeCardsCont div.cardItems img{
     width: 10rem;
     min-width: 3rem;
     border-radius: 2rem;
+    transition: all 300ms ease;
 }
 
+
+/* js classes */
+.matched{
+    opacity: 0.6;
+}
+.match-animation{
+    animation: matchPulse 0.6s ease;
+}
+.cardItems {
+    perspective: 1000px;
+}
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.cardItems.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+.cardItems:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+@keyframes matchPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0px #ff00a6;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #ff00a6;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0px #ff00a6;
+  }
+}
+
+
+/* media Quereis */
+
+@media (max-width:600px){
+    nav{
+        justify-content: center;
+    }
+    nav div#leftSideNav{
+        justify-content: center;
+        padding: 10px 0;
+    }
+    nav div#rightSideNav div#divContainer{
+        justify-content: center;
+        padding: 10px 5px;
+        margin: 20px 0;
+        border: #ffffff79 solid 1px;
+    }
+    header{
+        height: 80vh;
+    }
+}
